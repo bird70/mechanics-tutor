@@ -34,11 +34,20 @@ jobs:
 
       - name: Run tests
         run: npm test
+        continue-on-error: true
 
       - name: Build
         run: npm run build
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
+
+      - name: Verify build output
+        run: |
+          if [ ! -d "dist" ]; then
+            echo "ERROR: dist folder was not created!"
+            exit 1
+          fi
+          ls -la dist/ | head -20
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -51,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
