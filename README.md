@@ -9,6 +9,19 @@ Interactive NZ NCEA Level 3 Physics – Mechanics learning app.
 - Progress persistence via localStorage
 
 ## Development
+
+### Prerequisites
+
+- Node.js 20.19+ (or 22.12+)
+- npm 10+
+
+If you use `nvm`, the repo includes `.nvmrc`:
+
+```bash
+nvm install
+nvm use
+```
+
 ```
 npm install
 npm run dev

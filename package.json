@@ -2,6 +2,10 @@
   "name": "mechanics-tutor",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.19.0 || >=22.12.0",
+    "npm": ">=10"
+  },
   "description": "Interactive NZ NCEA Level 3 Physics – Mechanics learning app",
   "scripts": {
     "dev": "vite",
