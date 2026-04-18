@@ -50,7 +50,7 @@ jobs:
           ls -la dist/ | head -20
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
