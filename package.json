@@ -17,14 +17,14 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "react": "^18.2.0",
+    "react": "^19.2.5",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.14.0",
     "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@types/node": "^25.5.0",
-    "@types/react": "^18.2.43",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^8.58.1",
     "@typescript-eslint/parser": "^8.58.1",
